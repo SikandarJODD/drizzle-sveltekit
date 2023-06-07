@@ -29,11 +29,11 @@
 			<form action="?/insertData" method="POST">
 				<div class="flex items-center my-2">
 					<Label for="title" class="mr-2">Title of Card :</Label>
-					<Input type="text" name="title" id="title" placeholder="Title" class="w-fit" />
+					<Input type="text" name="title" id="title" placeholder="Title" class="w-fit" required />
 				</div>
 				<div class="flex items-center my-2">
 					<Label for="content" class="mr-2">Conent : Short & Sweet :</Label>
-					<Input type="text" name="content" id="content" placeholder="Content" class="w-fit" />
+					<Input type="text" name="content" id="content" placeholder="Content" class="w-fit" required />
 				</div>
 				<div>
 					<Button type="submit">Submit</Button>
