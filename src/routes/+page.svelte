@@ -45,7 +45,7 @@
 				<div class="container border-2 w-fit my-3 mx-3 py-2 border-gray-700 bg-sky-100" in:scale>
 					<form action="?/editData&io={i}" method="POST">
 						<div class="flex items-center my-2">
-							<Label for="title" class="mr-2">Title of Card :</Label>
+							<Label for="title" class="mr-2">Edit Card Title :</Label>
 							<Input
 								type="text"
 								name="title"
@@ -56,7 +56,7 @@
 							/>
 						</div>
 						<div class="flex items-center my-2">
-							<Label for="content" class="mr-2">Conent : Short & Sweet :</Label>
+							<Label for="content" class="mr-2">Edit Content :</Label>
 							<Input
 								type="text"
 								name="content"
