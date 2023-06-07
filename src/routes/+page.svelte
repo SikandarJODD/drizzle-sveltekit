@@ -21,7 +21,8 @@
 
 <main>
 	<h1 class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl m-5">
-		Drizzle ORM + <span class="text-orange-400">SvelteKit</span> + <span class="text-sky-400">Shadcn-svelte</span> 
+		Drizzle ORM + <span class="text-orange-400">SvelteKit</span> +
+		<span class="text-pink-500">Shadcn-Svelte</span>
 	</h1>
 	<div class="flex">
 		<div class="container border-2 w-fit my-3 mx-3 py-2 border-gray-700 bg-gray-50">
@@ -82,7 +83,7 @@
 					{item.title} : {item.content}
 				</h3>
 				<div class="mx-3">
-					<form action="?/delete&id={item.id}" method="POST" >
+					<form action="?/delete&id={item.id}" method="POST">
 						<Button type="submit" class="my-2 md:my-0">Delete</Button>
 						<Button
 							type="button"
