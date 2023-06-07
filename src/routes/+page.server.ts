@@ -12,7 +12,6 @@ export const load = async () => {
 export const actions: Actions = {
 	insertData: async ({ request }) => {
 		const { title, content } = Object.fromEntries(await request.formData());
-		console.log(title, content);
 
 		try {
 			await conn.insert(UserQui).values({
@@ -36,9 +35,7 @@ export const actions: Actions = {
 		const urlInfo = url.searchParams.get('io');
 		const { title, content } = Object.fromEntries(await request.formData());
 
-		console.log(urlInfo, title, content, ' URL INFOOOOOO');
 		try {
-			console.log('inside try');
 			await conn
 				.update(UserQui)
 				.set({
