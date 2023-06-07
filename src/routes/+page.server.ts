@@ -25,22 +25,33 @@ export const actions: Actions = {
 	},
 	delete: async ({ url }) => {
 		const urlInfo = url.searchParams.get('id');
-		console.log(urlInfo, typeof urlInfo);
 
 		try {
 			await conn.delete(UserQui).where(eq(UserQui.id, Number(urlInfo)));
 		} catch (e) {
 			console.log(e, 'Error');
 		}
+	},
+	editData: async ({ request, url }) => {
+		const urlInfo = url.searchParams.get('io');
+		const { title, content } = Object.fromEntries(await request.formData());
+
+		console.log(urlInfo, title, content, ' URL INFOOOOOO');
+		try {
+			console.log('inside try');
+			await conn
+				.update(UserQui)
+				.set({
+					title: String(title),
+					content: String(content)
+				})
+				.where(eq(UserQui.id, Number(urlInfo))).returning();
+
+			// await conn.delete(UserQui).where(eq(UserQui.id, Number(urlInfo)));
+		} catch (e) {
+			console.log(e, 'Error');
+		}
 	}
 };
 
-// const fetchViews = async () => {
-// 	const insights = await conn.select().from(PageInsights).where(eq(PageInsights.id, 1));
 
-// 	const views = ++insights[0].views;
-
-// 	await conn.update(PageInsights).set({ views }).where(eq(PageInsights.id, 1)).returning();
-
-// 	return views;
-// };

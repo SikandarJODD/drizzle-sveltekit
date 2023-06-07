@@ -1,7 +1,7 @@
 {
   "version": "5",
   "dialect": "pg",
-  "id": "b23ed49b-49d0-4231-b19d-42d71110da0f",
+  "id": "cd14c0b0-fe1c-4847-98a0-ee58545b0005",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "rework": {
@@ -16,13 +16,13 @@
         },
         "title": {
           "name": "title",
-          "type": "text",
+          "type": "varchar(40)",
           "primaryKey": false,
           "notNull": true
         },
         "content": {
           "name": "content",
-          "type": "text",
+          "type": "varchar(40)",
           "primaryKey": false,
           "notNull": true
         }
